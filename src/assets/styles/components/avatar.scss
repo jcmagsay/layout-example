@@ -1,0 +1,15 @@
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar--sm {
+  @extend .avatar;
+  height: 5rem;
+  width: 5rem;
+}
+
+.avatar__image {
+  height: inherit;
+  width: inherit;
+}

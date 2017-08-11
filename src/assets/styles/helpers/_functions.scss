@@ -1,0 +1,9 @@
+//----------------------------------------------------------------------
+// FUNCTION DECLARATIONS
+//----------------------------------------------------------------------
+
+// Returns a multiple of the base rhythm unit of the design
+// Converts to rems
+@function rhythm($multiplier) {
+  @return #{$multiplier * 8 / 10}rem;
+}

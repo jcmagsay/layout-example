@@ -1,0 +1,43 @@
+@import "functions";
+
+/* ---------------------------------------------------------------------
+ PADDING CLASS
+------------------------------------------------------------------------ */
+
+// Based on a rhythm of 0.8rem
+
+@mixin padding($rhythm) {
+  .padding-- {
+    &#{$rhythm} {
+      padding: rhythm($rhythm);
+    }
+    &top-#{$rhythm} {
+      padding-top: rhythm($rhythm);
+    }
+    &bottom-#{$rhythm} {
+      padding-bottom: rhythm($rhythm);
+    }
+    &left-#{$rhythm} {
+      padding-left: rhythm($rhythm);
+    }
+    &right-#{$rhythm} {
+      padding-right: rhythm($rhythm);
+    }
+    &flats-#{$rhythm} {
+      padding-top: rhythm($rhythm);
+      padding-bottom: rhythm($rhythm);
+    }
+    &sides-#{$rhythm} {
+      padding-left: rhythm($rhythm);
+      padding-right: rhythm($rhythm);
+    }
+  }
+}
+
+@include padding(0);
+@include padding(1);
+@include padding(2);
+@include padding(3);
+@include padding(4);
+@include padding(5);
+@include padding(6);

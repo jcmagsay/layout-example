@@ -1,0 +1,71 @@
+@import '../helpers/colors';
+
+/* ------------------------------------
+ TEXT STYLES
+--------------------------------------- */
+
+@mixin text($size: 1.5rem, $weight: 500, $lHeight: 1.2) {
+  font-size: $size / 2;
+  font-weight: $weight;
+  line-height: 1 * 1.4;
+}
+
+/* ------------------------------------
+ TEXT SIZES
+--------------------------------------- */
+
+.text--caption {
+  @include text(1.3rem);
+}
+
+.text--body {
+  @include text(1.5rem);
+}
+
+.text--subheading {
+  @include text(1.7rem);
+}
+
+.text--title {
+  @include text(2.1rem, 700);
+}
+
+.text--headline {
+  @include text(2.4rem);
+}
+
+.text--display-sm {
+  @include text(3.4rem);
+}
+
+.text--display-md {
+  @include text(4.5rem);
+}
+
+.text--display-lg {
+  @include text(5.6rem);
+}
+
+.text--display-xl {
+  @include text(11.2rem);
+}
+
+/* ------------------------------------
+ TEXT MODIFIERS
+--------------------------------------- */
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.text--centered {
+  text-align: center;
+}
+
+.text--underlined::after {
+  border-bottom: 0.1rem solid rgba($COLOR_DARK, 0.2);
+  content: '';
+  display: block;
+  margin-bottom: 1.6rem;
+  padding-top: 0.8rem;
+}
