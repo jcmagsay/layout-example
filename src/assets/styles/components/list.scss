@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.list--bullets {
+  list-style: inside disc;
+}
+
 .list__item {
   display: flex;
   > * {

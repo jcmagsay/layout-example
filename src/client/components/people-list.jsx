@@ -17,7 +17,7 @@ export default class PeopleList extends Component {
 
   _renderRepos() {
     return (
-      <ul>
+      <ul className="list--bullets">
         {this.props.repos.map((repo, i) => {
           return (
             <li key={`repos-list-${i}`}>
