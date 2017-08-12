@@ -1,0 +1,62 @@
+$COLOR_PRIMARY: #f4511e;
+$COLOR_SECONDARY: #455a64;
+$COLOR_LIGHTEST: white;
+
+/* ---------------------------------------------------------------------
+ Infinite Radial Loader
+------------------------------------------------------------------------ */
+
+@mixin loaderColor($color, $spinnerOpacity, $backgroundOpacity) {
+  border-bottom: 0.1rem solid rgba($color, $spinnerOpacity);
+  border-left: 0.1rem solid rgba($color, $backgroundOpacity);
+  border-right: 0.1rem solid rgba($color, $spinnerOpacity);
+  border-top: 0.1rem solid rgba($color, $spinnerOpacity);
+}
+
+.loader {
+  animation: radialLoad 0.75s infinite linear;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  transform: translateZ(0);
+  @include loaderColor($COLOR_LIGHTEST, 0.2, 1);
+}
+
+.loader_dark {
+  border-bottom: 0.1rem solid rgba($COLOR_SECONDARY, 0.7);
+  border-right: 0.1rem solid rgba($COLOR_SECONDARY, 0.7);
+  border-top: 0.1rem solid rgba($COLOR_SECONDARY, 0.7);
+}
+
+.loader_orange {
+  @include loaderColor($COLOR_PRIMARY, 1, 0.3);
+}
+
+.loader_lg {
+  height: 20rem;
+  width: 20rem;
+}
+
+.loader_centered {
+  margin: auto;
+}
+
+@-webkit-keyframes radialLoad {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes radialLoad {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

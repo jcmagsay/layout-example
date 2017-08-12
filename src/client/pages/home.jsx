@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PeopleList from 'components/people-list';
+import Loader from 'components/loader';
 // MOCK DATA
 import * as People from 'data/people';
 import * as Repos from 'data/repos';
@@ -31,6 +32,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
+        <Loader orange />
         <PeopleList
           people={this.state.people}
           repos={this.state.repos}
