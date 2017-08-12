@@ -32,7 +32,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <Loader orange lg />
+        <Loader orange large />
         <PeopleList
           people={this.state.people}
           repos={this.state.repos}
